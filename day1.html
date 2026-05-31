@@ -7,6 +7,16 @@
   <title>Document</title>
 
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f5f0e8;
+    }
+
     .header-text {
       color: #e8c547;
     }
@@ -23,9 +33,105 @@
       list-style: none;
     }
 
+    main {
+      padding: 40px 40px 40px 60px;
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      max-width: 860px;
+      margin: 0 auto;
+      gap: 40px;
+    }
+
+    .section {
+      margin-bottom: 24px;
+    }
+
     .section-title {
       border-bottom: 2px solid #e8c547;
+      margin-bottom: 24px;
     }
+
+    .job {
+      border-left: 3px solid #e8c547;
+      padding-left: 16px;
+      margin-bottom: 24px;
+    }
+
+    .job h5 {
+      font-size: 15px;
+      font-weight: 500;
+      color: black;
+    }
+
+    .job .company {
+      font-size: 13px;
+      color: gray;
+    }
+
+    .job .date-badge {
+      background-color: black;
+      color: #e8c547;
+      font-size: 11px;
+      display: inline-block;
+      /* top, right, bottom, left */
+      /* padding: 2px 10px 2px 10px; */
+
+      /* top+bottom, left + right */
+      padding: 2px 10px;
+      border-radius: 20px;
+      letter-spacing: 1px;
+    }
+
+    .job ul {
+      color: #444;
+      padding-left: 16px;
+      line-height: 1.5;
+    }
+
+    .edu-item {
+      margin-bottom: 12px;
+    }
+
+    .edu-item .major {
+      color: black;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .edu-item .school {
+      font-size: 12px;
+      color: gray;
+    }
+
+    .edu-item .year {
+      font-size: 11px;
+      color: #aa870a;
+    }
+
+    .skill-group{
+      margin-bottom: 12px;
+    }
+
+    .skill-group h5{
+      font-size: 12px;
+      color: gray;
+      text-transform: uppercase;
+    }
+
+    .skill-badge .badge{
+      background-color: #0e0e0d;
+      color: white;
+      /* y=top,bottom  , x=left,right */
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+    }
+
+    .skill-badge .yellow{
+       background-color: #e8c547;
+    }
+
+    
   </style>
 </head>
 
@@ -61,12 +167,12 @@
           ipsum praesentium.</p>
       </div>
 
-      <div>
+      <div class="section">
         <h3 class="section-title">Experience</h3>
-        <div>
+        <div class="job">
           <h5>Fullstack developer</h5>
-          <p>Skills Development Fund</p>
-          <p>2025-01 - Present</p>
+          <p class="company">Skills Development Fund</p>
+          <p class="date-badge">2025-01 - Present</p>
           <ul>
             <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum, error?</li>
             <li>Lorem ipsum dolor sit amet.</li>
@@ -74,29 +180,29 @@
           </ul>
         </div>
 
-        <div>
+        <div class="job">
           <h5>Instructor Web</h5>
-          <p>Sala IT</p>
-          <p>2025-01 - Present</p>
+          <p class="company">Sala IT</p>
+          <p class="date-badge">2025-01 - Present</p>
           <ul>
             <li>Taught HTML, CSS, and JavaScript to students</li>
           </ul>
         </div>
 
-        <div>
+        <div class="job">
           <h5>Backend</h5>
-          <p>Wnk System</p>
-          <p>Jul 2024 – Sep 2024</p>
+          <p class="company">Wnk System</p>
+          <p class="date-badge">Jul 2024 – Sep 2024</p>
           <ul>
             <li>Built a secure Cold Wallet app with blockchain tech</li>
             <li>Java backend using Maven & Spring Boot</li>
           </ul>
         </div>
 
-        <div>
+        <div class="job">
           <h5>Instructor – PHP & Laravel</h5>
-          <p>ICT Professional Training Center</p>
-          <p>Jan 2024 – May 2024</p>
+          <p class="company">ICT Professional Training Center</p>
+          <p class="date-badge">Jan 2024 – May 2024</p>
           <ul>
             <li>Delivered hands-on PHP and Laravel training</li>
             <li>Developed curriculum and assessed student progress</li>
@@ -104,11 +210,11 @@
         </div>
       </div>
 
-      <div>
+      <div class="section">
         <h3 class="section-title">Project</h3>
-        <div>
+        <div class="job">
           <h5>Ecommerce Website</h5>
-          <p>Aug 2024 – Feb 2025</p>
+          <p class="date-badge">Aug 2024 – Feb 2025</p>
           <ul>
             <li>Spring Boot + Next.js + PostgreSQL, deployed on VPS</li>
             <li>Full checkout, order notifications, admin dashboard</li>
@@ -120,6 +226,50 @@
     </div>
 
     <!-- Right column -->
+    <div>
+      <div class="section">
+        <h3 class="section-title">Education</h3>
+        <div class="edu-item">
+          <p class="major">Master's in Computer science</p>
+          <p class="school">Norton University</p>
+          <p class="year">2024 - Present</p>
+        </div>
+
+        <div class="edu-item">
+          <p class="major">Bachelor's in CS & Engineering</p>
+          <p class="school">RUPP University</p>
+          <p class="year">2020 - 2024</p>
+        </div>
+
+        <div class="edu-item">
+          <p class="major">High School Certificate</p>
+          <p class="school">BTB</p>
+          <p class="year">2019 – 2020</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3 class="section-title">Skills</h3>
+        <div class="skill-group">
+          <h5>Frontend</h5>
+          <div class="skill-badge">
+            <span class="badge yellow">NextJS</span>
+            <span class="badge">ReactJS</span>
+            <span class="badge">VueJS</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h5>Backend</h5>
+          <div class="skill-badge">
+            <span class="badge yellow">Springboot</span>
+            <span class="badge">NestJS</span>
+            <span class="badge yellow">NodeJS</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </main>
 
   <footer></footer>
