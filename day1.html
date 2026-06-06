@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -15,10 +16,25 @@
 
     body {
       background-color: #f5f0e8;
+      font-family: 'DM Sans', sans-serif;
     }
 
     .header-text {
       color: #e8c547;
+    }
+
+    header {
+       background-color: #1a1a2e;
+      color: white;
+    }
+
+    .group-header {
+      max-width: 850px;
+      margin: 0 auto;
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      padding: 60px;
     }
 
     .contact-bar {
@@ -76,7 +92,7 @@
       /* top, right, bottom, left */
       /* padding: 2px 10px 2px 10px; */
 
-      /* top+bottom, left + right */
+      /* y=top+bottom, x=left + right */
       padding: 2px 10px;
       border-radius: 20px;
       letter-spacing: 1px;
@@ -108,17 +124,17 @@
       color: #aa870a;
     }
 
-    .skill-group{
+    .skill-group {
       margin-bottom: 12px;
     }
 
-    .skill-group h5{
+    .skill-group h5 {
       font-size: 12px;
       color: gray;
       text-transform: uppercase;
     }
 
-    .skill-badge .badge{
+    .skill-badge .badge {
       background-color: #0e0e0d;
       color: white;
       /* y=top,bottom  , x=left,right */
@@ -127,23 +143,67 @@
       font-size: 12px;
     }
 
-    .skill-badge .yellow{
-       background-color: #e8c547;
+    .skill-badge .yellow {
+      background-color: #e8c547;
     }
 
-    
+    .lang-row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .lang-dot {
+      width: 10px;
+      height: 10px;
+      background-color: black;
+      border-radius: 50%;
+    }
+
+    .dot-group {
+      display: flex;
+      gap: 6px;
+    }
+
+    .dot-grey {
+      background-color: rgb(160, 143, 143);
+    }
+
+    footer {
+      text-align: center;
+      background-color: #e8c547;
+      padding: 16px;
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      border: 4px solid #e8c547;
+      overflow: hidden;
+    }
+
+    .avatar img {
+      width: 100px;
+      height: 100px;
+    }
   </style>
 </head>
 
 <body>
   <header>
-    <div>
-      <img width="200" height="200" src="./profile.png" alt="Profile">
+    <div class="group-header">
+      <div class="avatar">
+        <img src="./profile2.png" alt="Profile">
+      </div>
+      <div>
+        <h1>San <span class="header-text">Ratana</span></h1>
+        <p>FULL STACK DEVELOPER</p>
+      </div>
     </div>
-    <div>
-      <h1>San <span class="header-text">Ratana</span></h1>
-      <p>FULL STACK DEVELOPER</p>
-    </div>
+
   </header>
 
   <div class="contact-bar">
@@ -269,10 +329,37 @@
         </div>
       </div>
 
+      <div class="section">
+        <h3 class="section-title">Language</h3>
+        <div class="lang-row">
+          <p>Khmer</p>
+          <div class="dot-group">
+            <div class="lang-dot"></div>
+            <div class="lang-dot"></div>
+            <div class="lang-dot"></div>
+            <div class="lang-dot"></div>
+            <div class="lang-dot"></div>
+          </div>
+        </div>
+
+        <div class="lang-row">
+          <p>English</p>
+          <div class="dot-group">
+            <div class="lang-dot"></div>
+            <div class="lang-dot"></div>
+            <div class="lang-dot"></div>
+            <div class="lang-dot dot-grey"></div>
+            <div class="lang-dot dot-grey"></div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </main>
 
-  <footer></footer>
+  <footer>
+    © 2026 SalaIT - Web Developer with html,css,js,ReactJS
+  </footer>
 </body>
 
 </html>
