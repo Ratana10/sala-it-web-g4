@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #e8f0ea;   /* page background (the rest) */
+      font-family: "Times New Roman", Times, serif;
+      padding: 40px 16px;
+    }
+
+    .login-card {
+      width: 100%;
+      max-width: 440px;
+      background-color: rgb(255, 255, 255);  /* card background: white */
+      padding: 40px 34px;
+      border-radius: 10px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Avatar */
+    .avatar {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 28px;
+    }
+
+    .avatar img {
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+    }
+
+    /* Fallback emoji avatar (used if no image is set) */
+    .avatar .emoji {
+      font-size: 110px;
+      line-height: 1;
+    }
+
+    /* Form fields */
+    label {
+      display: block;
+      font-size: 18px;
+      font-weight: bold;
+      color: #111;
+      margin-bottom: 8px;
+    }
+
+    .field {
+      margin-bottom: 18px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px 14px;
+      font-size: 15px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #333;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+
+    input::placeholder {
+      color: #9a9a9a;
+    }
+
+    /* Green border on focus (matches the highlighted password field in the design) */
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+      border-color: #1aa01a;
+      box-shadow: 0 0 0 1px #1aa01a;
+    }
+
+    /* The password field shown highlighted by default in the mockup */
+    #password {
+      border-color: #1aa01a;
+      box-shadow: 0 0 0 1px #1aa01a;
+    }
+
+    /* Forgot password link */
+    .forgot {
+      text-align: right;
+      margin: 6px 0 14px;
+    }
+
+    .forgot a {
+      font-size: 16px;
+      color: #551a8b;
+      text-decoration: underline;
+    }
+
+    /* Buttons */
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 13px;
+      font-size: 15px;
+      font-family: Arial, Helvetica, sans-serif;
+      border-radius: 4px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .btn-login {
+      background: #1aa01a;
+      color: #ffffff;
+      border: 1px solid #1aa01a;
+      margin-bottom: 12px;
+    }
+
+    .btn-login:hover {
+      background: #168816;
+    }
+
+    .btn-signup {
+      background: #ffffff;
+      color: #222;
+      border: 1px solid #1aa01a;
+    }
+
+    .btn-signup:hover {
+      background: #f3fbf3;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-card">
+
+    <!-- Avatar: replace the src below with your own image, or it falls back to an emoji -->
+    <div class="avatar">
+      <img  src="../profile.png" alt="Profile Picture">
+    </div>
+
+    <form onsubmit="return false;">
+      <div class="field">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter username">
+      </div>
+
+      <div class="field">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password">
+      </div>
+
+      <div class="forgot">
+        <a href="#">Forgot password</a>
+      </div>
+
+      <button type="submit" class="btn btn-login">Login</button>
+      <button type="button" class="btn btn-signup">Signup</button>
+    </form>
+
+  </div>
+</body>
+</html>

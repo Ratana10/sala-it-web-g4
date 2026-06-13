@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+
+    }
+
+    form {
+      width: 300px;
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .avatar-img {
+      width: 200px;
+      height: 200px;
+    }
+
+    label {
+      display: block;
+    }
+
+    input {
+      width: 100%;
+      padding: 6px 12px;
+      display: inline-block;
+      box-sizing: border-box;
+
+    }
+
+    input:focus {
+      border: 4px solid green;
+      outline: none;
+
+    }
+
+    .btn-login {
+      background-color: green;
+      width: 100%;
+      color: white;
+      padding: 6px 0px;
+      border: none;
+    }
+
+    .btn-login a {
+      text-decoration: none;
+      color: white;
+    }
+
+
+    .btn-signup {
+      margin-top: 10px;
+      background-color: white;
+      width: 100%;
+      color: green;
+      padding: 6px 0px;
+      border: 1px solid green;
+    }
+
+    .forgot-password {
+      display: flex;
+      justify-content: end;
+      margin: 10px 0;
+    }
+
+    .forgot-password a {
+      text-decoration: none;
+    }
+
+    .forgot-password:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="form-container">
+    <form action="" class="">
+      <div class="image-container">
+        <img class="avatar-img"
+          src="https://static.vecteezy.com/system/resources/previews/067/619/141/non_2x/flat-style-cartoon-boy-avatar-smiling-male-profile-icon-for-app-web-and-social-media-vector.jpg"
+          alt="">
+      </div>
+
+
+      <div>
+        <label for="">Username</label>
+        <input type="text">
+      </div>
+
+
+      <div>
+        <label for="">Password</label>
+        <input type="date">
+      </div>
+
+      <div>
+        <label for="">Gender</label>
+        <select name="" id="">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option >Other</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="">Address</label>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+
+      </div>
+
+      <div class="forgot-password">
+        <a href="">Forgot password</a>
+
+      </div>
+
+      <button class="btn-login"><a href="./index.html" target="_blank">Login</a></button>
+      <button class="btn-signup">Signup</button>
+    </form>
+  </div>
+</body>
+
+</html>
